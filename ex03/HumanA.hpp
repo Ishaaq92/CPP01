@@ -6,11 +6,13 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:55:09 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/07/27 11:27:01 by ishaaq           ###   ########.fr       */
+/*   Updated: 2025/07/27 11:39:15 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef WEAPON_HPP
+# include "Weapon.hpp"
+#endif
 
 class HumanA
 {
