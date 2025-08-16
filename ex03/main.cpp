@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
+/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/27 11:24:07 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/07/27 11:37:12 by ishaaq           ###   ########.fr       */
+/*   Created: 2025/07/29 12:34:26 by isahmed           #+#    #+#             */
+/*   Updated: 2025/07/29 12:50:50 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int	main(void)
 
 	Weapon wB;
 	wB.setType("crude spiked club");
-	HumanB Bodrul("Bodrul");
+	HumanB Bob("Bob");
 
-	Bodrul.setWeapon(wB);
-	Bodrul.attack();
+	Bob.setWeapon(&wB);
+	Bob.attack();
 	wB.setType("some other type of club");
-	Bodrul.attack();
+	Bob.attack();
 
 }
