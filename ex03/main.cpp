@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 12:34:26 by isahmed           #+#    #+#             */
-/*   Updated: 2025/07/29 12:50:50 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/08/28 15:36:30 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 
 	Weapon wB;
 	wB.setType("crude spiked club");
-	HumanB Bob("Bob");
+	HumanB Bob("Bob", NULL);
 
 	Bob.setWeapon(&wB);
 	Bob.attack();

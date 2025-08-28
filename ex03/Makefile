@@ -6,24 +6,29 @@
 #    By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 23:08:46 by ishaaq            #+#    #+#              #
-#    Updated: 2025/07/27 11:21:01 by ishaaq           ###   ########.fr        #
+#    Updated: 2025/08/28 15:27:13 by isahmed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC=g++
-CPPFLAGS=-std=c++98 -Wall -Wextra -Werror
-CPPFILES=main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
-BINARY=fight
+CXX = clang++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+NAME = fight
 
-all: $(BINARY)
+OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 
-$(BINARY): $(CPPFILES)
-	$(CC) $(CPPFLAGS) $(CPPFILES) -o $(BINARY)
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $< -c -o $@
 
 re: fclean all
 
 clean:
-	rm -rf *.o
+	rm -rf $(OBJS)
 
 fclean: clean
-	rm -rf $(BINARY)
+	rm -rf $(NAME)
