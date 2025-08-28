@@ -1,20 +1,22 @@
-CC = clang++
-CFLAGS = -Wall -Wextra
-CPPFILES = main.cpp
-BINARY = a.out
+CXX = clang++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = main.cpp
+NAME = a.out
 
-all:$(BINARY)
+OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 
-$(BINARY): $(CFILES)
-	$(CC) $(CFLAGS) $(CPPFILES) -o $(BINARY)
+all: $(NAME)
 
-v: 
-	$(CC) $(CFLAGS) $(CPPFILES) -o $(BINARY) -g
+$(NAME): $(OBJS)
+	$(CXX) $(CFLAGS) -o $(NAME) $(OBJS)
 
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $< -c -o $@
 
 re: fclean all
 
 clean:
-	rm -rf *.o
+	rm -rf $(OBJS)
+
 fclean: clean
-	rm -rf $(BINARY) 
+	rm -rf $(NAME) 
