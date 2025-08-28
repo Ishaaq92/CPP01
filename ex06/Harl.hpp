@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 17:46:19 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/08/17 09:40:02 by ishaaq           ###   ########.fr       */
+/*   Updated: 2025/08/28 17:13:40 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Harl
 		Harl(void);
 		~Harl(void);
 		void	complain(std::string level);
+		void	filter(std::string level);
 	private:
 		void	debug( void );
 		void	info( void );
