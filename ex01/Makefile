@@ -6,24 +6,32 @@
 #    By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 23:08:46 by ishaaq            #+#    #+#              #
-#    Updated: 2025/07/27 10:01:37 by ishaaq           ###   ########.fr        #
+#    Updated: 2025/08/28 14:37:49 by isahmed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC=g++
-CPPFLAGS=-std=c++98 -Wall -Wextra -Werror
-CPPFILES=main.cpp zombie.cpp zombieHorde.cpp 
-BINARY=zombieHorde
+CXX = clang++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp
+NAME = zombieHorde
 
-all: $(BINARY)
+OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 
-$(BINARY): $(CPPFILES)
-	$(CC) $(CPPFLAGS) $(CPPFILES) -o $(BINARY)
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $< -c -o $@
 
 re: fclean all
 
 clean:
-	rm -rf *.o
+	rm -rf $(OBJS)
 
 fclean: clean
-	rm -rf $(BINARY)
+	rm -rf $(NAME)
+
+.PHONY: all clean fclean re
+
