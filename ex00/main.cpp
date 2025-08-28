@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
+/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 22:38:00 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/07/26 23:06:16 by ishaaq           ###   ########.fr       */
+/*   Updated: 2025/08/28 14:17:02 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int main(void)
     randomChump("Timmy");
     z = newZombie("Sam");
     z->announce();
+    
     delete z;
 }

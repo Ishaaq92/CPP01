@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 22:20:23 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/07/26 22:56:04 by ishaaq           ###   ########.fr       */
+/*   Updated: 2025/08/28 14:22:22 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 Zombie::Zombie(void)
 {
-	std::cout << "A Zombie was constructed" << std::endl;
+	std::cout << this->name_ <<  "Zombie was constructed" << std::endl;
 }
 
 Zombie::~Zombie(void)
 {
-	std::cout << this->name << " was destructed" << std::endl;
+	std::cout << this->name_ << " was destructed" << std::endl;
 }
 void    Zombie::announce(void)
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->name_ << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 void	Zombie::set_name(std::string name)
 {
-	this->name = name;
+	this->name_ = name;
 }
