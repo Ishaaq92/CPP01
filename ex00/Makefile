@@ -6,11 +6,11 @@
 #    By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 23:08:46 by ishaaq            #+#    #+#              #
-#    Updated: 2025/08/28 14:18:12 by isahmed          ###   ########.fr        #
+#    Updated: 2025/09/03 13:16:27 by isahmed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 NAME = zombie

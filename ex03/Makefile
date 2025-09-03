@@ -6,11 +6,11 @@
 #    By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 23:08:46 by ishaaq            #+#    #+#              #
-#    Updated: 2025/08/28 15:27:13 by isahmed          ###   ########.fr        #
+#    Updated: 2025/09/03 13:17:43 by isahmed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CXX = clang++
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 NAME = fight
