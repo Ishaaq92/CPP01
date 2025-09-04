@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 17:50:26 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/08/17 09:41:51 by ishaaq           ###   ########.fr       */
+/*   Updated: 2025/09/04 15:35:54 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,17 @@ Harl::Harl(void)
 
 Harl::~Harl(void)
 {
+}
+
+Harl::Harl(const Harl &harl)
+{
+	*this = harl;
+}
+
+Harl	&Harl::operator=(const Harl &rhs)
+{
+	(void) rhs;
+	return (*this);
 }
 
 void	Harl::complain(std::string level)
@@ -52,3 +63,4 @@ void Harl::error( void )
 {
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
+

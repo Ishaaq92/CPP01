@@ -6,22 +6,27 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:55:09 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/07/29 12:39:26 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/09/04 15:03:46 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
+#pragma once
+
 # include "Weapon.hpp"
-#endif
+# include <iostream>
 
 class HumanA
 {
+    private:
+        std::string name_;
+        Weapon      &weapon_;
+
+	protected:
+
     public:
         HumanA(std::string name, Weapon &weapon);
+        HumanA(const HumanA &human);
         ~HumanA(void);
         void    attack(void);
-    private:
-        std::string name;
-        Weapon      &weapon;
-         
 };
+

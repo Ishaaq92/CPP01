@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 22:17:06 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/07/26 22:26:40 by ishaaq           ###   ########.fr       */
+/*   Updated: 2025/09/04 14:46:14 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ class Zombie
 	public:
 	 	Zombie(void);
 	 	~Zombie(void);
+	 	Zombie(const Zombie &z);
 		void	announce(void);
 		void	set_name(std::string name);
+		Zombie	&operator=(const Zombie &rhs);
 	private:
-		std::string	name;
+		std::string	name_;
 };
 
 #endif

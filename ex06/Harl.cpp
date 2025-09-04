@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 17:50:26 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/08/28 17:30:31 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/09/04 15:41:01 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	Harl::complain(std::string level)
 			is_level = true;
 
 		(this->*fptr[i])();
+		std::cout << std::endl;
 	}
 
 }
