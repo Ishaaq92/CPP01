@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:55:09 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/09/04 15:03:46 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/09/04 16:17:24 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ class HumanA
         HumanA(std::string name, Weapon &weapon);
         HumanA(const HumanA &human);
         ~HumanA(void);
-        void    attack(void);
+        void    attack(void) const;
 };
 

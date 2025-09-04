@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:58:38 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/09/04 15:05:13 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/09/04 16:17:51 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ HumanA::~HumanA(void)
 	std::cout << this->name_ << " was destructed" << std::endl;
 }
 
-void    HumanA::attack(void)
+void    HumanA::attack(void) const
 {
 	std::cout << this->name_ << " attacks with " << this->weapon_.getType() << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:43:38 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/09/04 14:59:05 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/09/04 16:24:06 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,9 @@ Weapon::Weapon(const Weapon &weapon)
 	*this = weapon;
 }
 
-std::string&    Weapon::getType(void)
+std::string		Weapon::getType(void) const
 {
-    std::string &typeREF = this->type_;
-    return (typeREF);
+    return (this->type_);
 }
 
 void    Weapon::setType(std::string newType)

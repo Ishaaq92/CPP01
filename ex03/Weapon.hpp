@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:43:52 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/09/04 14:57:44 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/09/04 16:24:15 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Weapon
 		~Weapon(void);
 		Weapon(const Weapon &weapon);
 		Weapon	&operator=(const Weapon &weapon);
-        std::string& getType(void);
+        std::string	getType(void) const;
         void    setType(std::string newType);
 };
 

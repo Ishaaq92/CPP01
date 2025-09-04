@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:31:12 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/08/28 14:44:48 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/09/04 16:14:29 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
 
 	str = "This is a test";
 	std::cout << &str << std::endl;
-	std::cout << &(stringPTR) << std::endl;
+	std::cout << stringPTR << std::endl;
 	std::cout << &(stringREF) << std::endl;
 
 	std::cout << str << std::endl;

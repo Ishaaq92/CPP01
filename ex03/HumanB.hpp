@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:55:09 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/09/04 15:07:13 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/09/04 16:17:42 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class HumanB
         HumanB(std::string name, Weapon *weapon);
         HumanB(const HumanB &human);
         ~HumanB(void);
-        void    attack(void);
+        void    attack(void) const;
         void    setWeapon(Weapon *w);
 };
 
