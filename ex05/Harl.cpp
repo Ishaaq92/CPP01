@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
+/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 17:50:26 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/09/04 15:35:54 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/10/22 12:13:15 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ Harl::~Harl(void)
 
 Harl::Harl(const Harl &harl)
 {
-	*this = harl;
+	(void) harl;
+	// *this = harl;
 }
 
 Harl	&Harl::operator=(const Harl &rhs)

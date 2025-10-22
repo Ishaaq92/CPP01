@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:43:52 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/09/04 16:24:15 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/10/09 15:41:33 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Weapon
 
     public:
 		Weapon(void);
+		Weapon(std::string name);
 		~Weapon(void);
 		Weapon(const Weapon &weapon);
 		Weapon	&operator=(const Weapon &weapon);

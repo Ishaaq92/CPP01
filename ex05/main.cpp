@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
+/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 23:10:27 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/08/16 23:13:01 by ishaaq           ###   ########.fr       */
+/*   Updated: 2025/10/22 12:02:21 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	run_tests(void)
 	harl.complain("INFO");
 	harl.complain("WARNING");
 	harl.complain("ERROR");
+	harl.complain("");
+	harl.complain("INVALID");
 }
 
 int	main(void)

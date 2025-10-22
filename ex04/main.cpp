@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/22 11:28:11 by isahmed           #+#    #+#             */
+/*   Updated: 2025/10/22 11:58:26 by isahmed          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -15,12 +27,9 @@ std::string	freplace(const std::string& text, const std::string& s1, const std::
 
 void	writeToFile(std::string fileName, std::string s)
 {
-	// std::ofstream	newFile(fileName.append(".replace"));
-
 	fileName.append(".replace");
-	std::cout <<fileName<< std::endl;
+	std::cout << fileName << std::endl;
 	std::ofstream	MyFile(fileName.c_str());
-
 	MyFile << s;
 	MyFile.close();
 }
@@ -28,22 +37,34 @@ void	writeToFile(std::string fileName, std::string s)
 int	main(int ac, char **av)
 {
 	std::string text;
-	std::string tmp;
-	std::string	s;
+	std::string line;
 
-	if (ac != 4)
+	if (ac != 4 || av[2][0] == '\0')
 		return (1);
 	std::fstream read(av[1]);
 	if (!read.is_open())
 		return (std::cout << "Invalid file" << std::endl, 1);
-	while (getline(read, tmp))
-		text.append(tmp).append("\n");
-	if (text.empty())
-		return (std::cout << text << std::endl, 1);
-
-	s = freplace(text, av[2], av[3]);
-	// std::cout << final << std::endl;
-	// std::string	file(av[1]);
-	writeToFile(av[1], s);
+	while (getline(read, line))
+		text.append(line).append("\n");
+	text = freplace(text, av[2], av[3]);
+	writeToFile(av[1], text);
 	return (0);
 }
+
+// Testing
+
+// 	Valid inputs
+// valgrind ./a.out Makefile "CXX" "CPP"
+
+// 	Empty file
+// touch file
+// valgrind ./a.out  file "test1" "test2"
+
+// 	Invalid file
+// valgrind ./a.out  invalid_file "test1" "test2"
+
+// 	Empty text1
+// valgrind ./a.out Makefile "" "test2"
+
+//	Empty text2
+// valgrind ./a.out Makefile "test2" "" 
